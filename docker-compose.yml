@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  thehill-member-intro-next:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+      - ./.env.production
+    ports:
+      - 3000:3000
+    image: thehill_intro:v0.1.4
+    restart: always
